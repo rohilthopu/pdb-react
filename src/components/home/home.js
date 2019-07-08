@@ -1,11 +1,16 @@
-import React, {Component} from 'react';
+import React from 'react';
 import NavBar from '../nav/nav';
+import SimpleTable from '../guerrilla/guerrilla_na'
 import './home.css';
 
 function Home() {
+
+
     return (
         <div>
-            <NavBar/>
+            <NavBar />
+            <SimpleTable />
+
         </div>
     );
 }
