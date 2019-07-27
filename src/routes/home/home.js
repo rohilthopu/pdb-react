@@ -2,6 +2,10 @@ import React from 'react';
 import NavBar from '../../components/nav/nav'
 import Guerrilla from '../../components/guerrilla/guerrilla.js'
 
+const heroMargin = {
+    marginBottom: '2%'
+};
+
 class Home extends React.Component {
     render() {
         function getCurrentDate(){
