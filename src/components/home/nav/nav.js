@@ -1,8 +1,6 @@
 import React from 'react'
 import 'bulma/css/bulma.css'
-import FontAwesomeIcon from 'react-fontawesome'
-import {fas} from "@fortawesome/free-solid-svg-icons";
-import {faHome} from "@fortawesome/free-solid-svg-icons/faHome";
+
 
 const NavBar = () => {
     return (
@@ -10,7 +8,8 @@ const NavBar = () => {
             <div id="navbar-menu" className="navbar-menu">
                 <div className="navbar-start">
                     <a className="navbar-item" href="/">
-                        <FontAwesomeIcon icon={['fas', 'faHome']}/>
+                        <span className="icon"><i className="fas fa-home"/></span>
+                        <span />
                         <span>Pad DB</span>
                     </a>
                     <div className="navbar-item has-dropdown is-hoverable">
