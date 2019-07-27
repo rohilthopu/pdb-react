@@ -1,10 +1,9 @@
 import React from 'react';
-import NavBar from '../../components/nav/nav.js'
-
+import Guerrilla from '../../components/guerrilla/guerrilla.js'
 
 function Home() {
     return (
-        <NavBar/>
+        <Guerrilla/>
     );
 }
 
