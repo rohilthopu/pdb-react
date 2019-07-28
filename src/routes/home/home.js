@@ -2,10 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import NavBar from '../../components/nav/nav'
 import Guerrilla from '../../components/guerrilla/guerrilla.js'
-
-const heroMargin = {
-    marginBottom: '2%'
-};
+import './home.css';
 
 class Home extends React.Component {
 
@@ -13,39 +10,46 @@ class Home extends React.Component {
         super(props);
         this.state = {'guerrillaDungeons': []};
         this.getGuerrillaDungeons = this.getGuerrillaDungeons.bind(this);
+        this.getActiveDungeons = this.getActiveDungeons.bind(this);
     }
 
     componentDidMount() {
-        console.log('Downloading Guerrilla Data....');
+        // console.log('Downloading Guerrilla Data....');
         this.getGuerrillaDungeons()
     }
 
     getGuerrillaDungeons() {
         axios.get('https://www.pad-db.com/api/guerrilla')
-            .then( (response) => {
-                console.log('Receving guerrilla dungeon data:');
-                response.data.map((dungeon) => console.log(dungeon));
+            .then((response) => {
+                // console.log('Receving guerrilla dungeon data:');
+                // response.data.map((dungeon) => console.log(dungeon));
                 this.setState({'guerrillaDungeons': response.data});
-            }).catch( (error) => {
+            }).catch((error) => {
                 console.log(error)
             }
         );
     }
 
-
+    getActiveDungeons() {
+        return this.state.guerrillaDungeons.filter(
+            (dungeon) => dungeon.status === "Active"
+        );
+    }
 
     render() {
-        function getCurrentDate(){
+
+        function getCurrentDate() {
             let today = new Date();
             const dd = String(today.getDate()).padStart(2, '0');
             const mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
             const yyyy = today.getFullYear();
-            return  mm + '/' + dd + '/' + yyyy;
+            return mm + '/' + dd + '/' + yyyy;
         }
 
-        function HomeBanner() {
-            return (
-                <section className="hero is-dark" style={heroMargin}>
+        return (
+            <div>
+                <NavBar/>
+                <section className="hero is-dark hero-margin">
                     <div className="hero-body has-text-centered">
                         <div className="container is-fluid">
                             <h1 className="title"> Schedule </h1>
@@ -53,13 +57,14 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
-            );
-        }
-        return (
-            <div>
-                <NavBar/>
-                <HomeBanner/>
-                <Guerrilla/>
+                <div className='columns is-centered'>
+                    <div className='column'>
+                        <div className='has-text-centered'>
+                            <h2>Active</h2>
+                        </div>
+                        <Guerrilla activeDungeons={this.getActiveDungeons()}/>
+                    </div>
+                </div>
             </div>
         );
     }
