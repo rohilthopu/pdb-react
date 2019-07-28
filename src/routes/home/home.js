@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import NavBar from '../../components/nav/nav'
-import Guerrilla from '../../components/guerrilla/guerrilla.js'
+import ActiveGuerrilla from '../../components/guerrilla/active_guerrilla.js'
+import UpcomingGuerrilla from '../../components/guerrilla/upcoming_guerrilla.js'
 import './home.css';
 
 class Home extends React.Component {
@@ -11,10 +12,11 @@ class Home extends React.Component {
         this.state = {'guerrillaDungeons': []};
         this.getGuerrillaDungeons = this.getGuerrillaDungeons.bind(this);
         this.getActiveDungeons = this.getActiveDungeons.bind(this);
+        this.getUpcomingDungeons = this.getUpcomingDungeons.bind(this);
     }
 
     componentDidMount() {
-        // console.log('Downloading Guerrilla Data....');
+        // console.log('Downloading UpcomingGuerrilla Data....');
         this.getGuerrillaDungeons();
     }
 
@@ -33,6 +35,12 @@ class Home extends React.Component {
     getActiveDungeons() {
         return this.state.guerrillaDungeons.filter(
             (dungeon) => dungeon.status === "Active"
+        );
+    }
+
+    getUpcomingDungeons() {
+        return this.state.guerrillaDungeons.filter(
+            (dungeon) => dungeon.status === "Upcoming"
         );
     }
 
@@ -58,14 +66,17 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div className='columns is-centered'>
-                    <div className='column is-one-quarter'>
+                    <div className='column is-half'>
                         <div className='has-text-centered'>
-                            <h2>Active</h2>
+                            <h1>Active Dungeons</h1>
                         </div>
-                        <Guerrilla activeDungeons={this.getActiveDungeons()}/>
+                        <ActiveGuerrilla dungeons={this.getActiveDungeons()}/>
+                        <div className='has-text-centered'>
+                            <h1>Upcoming Dungeons</h1>
+                        </div>
+                        <UpcomingGuerrilla dungeons={this.getUpcomingDungeons()}/>
                     </div>
                 </div>
-
             </div>
         );
     }
