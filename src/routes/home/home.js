@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import NavBar from '../../components/nav/nav'
 import Guerrilla from '../../components/guerrilla/guerrilla.js'
 
@@ -7,6 +8,32 @@ const heroMargin = {
 };
 
 class Home extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {'guerrillaDungeons': []};
+        this.getGuerrillaDungeons = this.getGuerrillaDungeons.bind(this);
+    }
+
+    componentDidMount() {
+        console.log('Downloading Guerrilla Data....');
+        this.getGuerrillaDungeons()
+    }
+
+    getGuerrillaDungeons() {
+        axios.get('https://www.pad-db.com/api/guerrilla')
+            .then( (response) => {
+                console.log('Receving guerrilla dungeon data:');
+                response.data.map((dungeon) => console.log(dungeon));
+                this.setState({'guerrillaDungeons': response.data});
+            }).catch( (error) => {
+                console.log(error)
+            }
+        );
+    }
+
+
+
     render() {
         function getCurrentDate(){
             let today = new Date();
