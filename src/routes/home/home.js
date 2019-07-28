@@ -15,7 +15,7 @@ class Home extends React.Component {
 
     componentDidMount() {
         // console.log('Downloading Guerrilla Data....');
-        this.getGuerrillaDungeons()
+        this.getGuerrillaDungeons();
     }
 
     getGuerrillaDungeons() {
@@ -58,13 +58,14 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div className='columns is-centered'>
-                    <div className='column'>
+                    <div className='column is-one-quarter'>
                         <div className='has-text-centered'>
                             <h2>Active</h2>
                         </div>
                         <Guerrilla activeDungeons={this.getActiveDungeons()}/>
                     </div>
                 </div>
+
             </div>
         );
     }
