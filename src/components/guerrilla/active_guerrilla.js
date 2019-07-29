@@ -33,7 +33,7 @@ class ActiveGuerrilla extends React.Component {
                             <td className="has-text-left">{dungeon.name}</td>
                             <td className="has-text-centered">{dungeon.group}</td>
                             <td className="has-text-centered">{dungeon.status}</td>
-                            <td className="has-text-centered spaced" name="endtime">{getTimeUntil(dungeon)}</td>
+                            <td className="has-text-centered spaced">{getTimeUntil(dungeon)}</td>
                         </tr>
                     )
                 )}

@@ -18,6 +18,7 @@ class Home extends React.Component {
     componentDidMount() {
         // console.log('Downloading UpcomingGuerrilla Data....');
         this.getGuerrillaDungeons();
+        setInterval(this.getGuerrillaDungeons, 60000)
     }
 
     getGuerrillaDungeons() {
@@ -34,13 +35,19 @@ class Home extends React.Component {
 
     getActiveDungeons() {
         return this.state.guerrillaDungeons.filter(
-            (dungeon) => dungeon.status === "Active"
+            (dungeon) => {
+                let time = new Date().getTime() / 1000;
+                return dungeon.status === "Active" && dungeon.start_secs <= time && dungeon.end_secs > time
+            }
         );
     }
 
     getUpcomingDungeons() {
         return this.state.guerrillaDungeons.filter(
-            (dungeon) => dungeon.status === "Upcoming"
+            (dungeon) => {
+                let time = new Date().getTime() / 1000;
+                return dungeon.status === "Upcoming" && dungeon.start_secs > time
+            }
         );
     }
 
