@@ -22,10 +22,8 @@ class Home extends React.Component {
     }
 
     getGuerrillaDungeons() {
-        axios.get('https://www.pad-db.com/api/guerrilla')
+        axios.get('https://api.pad-db.com/api/guerrilla')
             .then((response) => {
-                // console.log('Receving guerrilla dungeon data:');
-                // response.data.map((dungeon) => console.log(dungeon));
                 this.setState({'guerrillaDungeons': response.data});
             }).catch((error) => {
                 console.log(error)
@@ -73,7 +71,7 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div className='columns is-centered column_margin'>
-                    <div className='column is-three-fifths'>
+                    <div className='column is-three-quarters'>
                         <div className='subtitle has-text-centered'>
                             <h1>Active Dungeons</h1>
                         </div>
