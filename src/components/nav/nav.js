@@ -11,6 +11,7 @@ class NavBar extends React.Component {
                             <span className="icon"><i className="fas fa-home"/></span>
                             <span>PAD DB</span>
                         </a>
+                        <a className='navbar-item' href='/search/'>Search</a>
                         {/*<div className="navbar-item has-dropdown is-hoverable">*/}
                         {/*    <a className="navbar-link" href="/">*/}
                         {/*        <span className="icon"><i className="fas fa-globe-americas"/></span>*/}
