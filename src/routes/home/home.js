@@ -73,12 +73,12 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div className='columns is-centered column_margin'>
-                    <div className='column is-half'>
-                        <div className='has-text-centered'>
+                    <div className='column is-three-fifths'>
+                        <div className='subtitle has-text-centered'>
                             <h1>Active Dungeons</h1>
                         </div>
                         <ActiveGuerrilla dungeons={this.getActiveDungeons()}/>
-                        <div className='has-text-centered'>
+                        <div className='subtitle has-text-centered'>
                             <h1>Upcoming Dungeons</h1>
                         </div>
                         <UpcomingGuerrilla dungeons={this.getUpcomingDungeons()}/>
