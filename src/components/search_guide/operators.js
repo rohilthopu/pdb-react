@@ -15,7 +15,7 @@ class Operators extends React.Component {
                     <div className="column is-bordered">
                         <div className="container is-fluid has-bottom-margin is-ful">
                             <div>
-                                The operators supported by the engine are listed in the table below.
+                                The operators currently supported by the engine are listed in the table below.
                             </div>
                             <table className="table is-fullwidth">
                                 <thead>
@@ -58,13 +58,23 @@ class Operators extends React.Component {
                                 </tr>
                                 <tr>
                                     <td> and </td>
-                                    <td>Logical And (between filters) </td>
+                                    <td>Logical AND (between filters) </td>
                                     <td>attribute = water and sub attribute = light</td>
                                 </tr>
                                 <tr>
                                     <td> , </td>
-                                    <td>Logical And (local) ***</td>
+                                    <td>Logical AND (local) ***</td>
                                     <td>types = dragon, god</td>
+                                </tr>
+                                <tr>
+                                    <td> x </td>
+                                    <td> Amount **</td>
+                                    <td>awakenings = 7c x4</td>
+                                </tr>
+                                <tr>
+                                    <td> || </td>
+                                    <td> Logical OR (combines two query sets together)</td>
+                                    <td>valkyrie ciel || types = healer</td>
                                 </tr>
                                 <tr>
                                     <td> evolves into </td>
@@ -74,7 +84,10 @@ class Operators extends React.Component {
                                 </tbody>
                             </table>
                             <div>
-                                *** Currently only applies to types, awakenings, and super awakenings
+                                ** Applies to awakenings and super awakenings
+                            </div>
+                            <div>
+                                *** Applies to types, awakenings, and super awakenings
                             </div>
                         </div>
                     </div>

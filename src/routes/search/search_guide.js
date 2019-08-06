@@ -3,6 +3,8 @@ import NavBar from '../../components/nav/nav';
 import Main from '../../components/search_guide/main';
 import Overview from '../../components/search_guide/overview';
 import Operators from '../../components/search_guide/operators';
+import Categories from '../../components/search_guide/categories';
+
 
 class SearchGuide extends React.Component {
     constructor(props) {
@@ -44,7 +46,6 @@ class SearchGuide extends React.Component {
                                     <li><a onClick={this.jumpToOverview}>Overview</a></li>
                                     <li><a onClick={this.jumpToOperators}>Operators</a></li>
                                     <li><a>Query Chart</a></li>
-                                    <li><a>Examples</a></li>
                                 </ul>
                             </aside>
                         </div>
@@ -55,6 +56,9 @@ class SearchGuide extends React.Component {
                 </div>
                 <div ref={this.operatorsSection}>
                     <Operators />
+                </div>
+                <div>
+                    <Categories />
                 </div>
             </div>
         )
