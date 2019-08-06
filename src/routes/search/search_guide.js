@@ -49,6 +49,7 @@ class SearchGuide extends React.Component {
                                     SECTIONS
                                 </p>
                                 <ul className="menu-list">
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li><a onClick={this.jumpToOverview}>Overview</a></li>
                                     <li><a onClick={this.jumpToOperators}>Operators</a></li>
                                     <li><a onClick={this.jumpToCategories}>Categories</a></li>
