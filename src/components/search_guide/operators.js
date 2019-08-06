@@ -2,66 +2,79 @@ import React from 'react';
 import './overview.css';
 
 
-class Overview extends React.Component {
+class Operators extends React.Component {
     render() {
         return (
-            <div>
-                <div className="hero is-fullheight">
-                    <div className="hero-body">
-                        <div className="columns is-desktop is-vcentered">
-                            <div className="column is-centered is-one-third">
-                                <div className="container is-fluid">
-                                    <h1 className="title">Overview</h1>
-                                </div>
+            <div className="box">
+                <div className="columns is-desktop is-centered main-title">
+                    <div className="column is-centered is-one-third">
+                        <div className="container is-fluid">
+                            <h1 className="title">Operators</h1>
+                        </div>
+                    </div>
+                    <div className="column is-bordered">
+                        <div className="container is-fluid has-bottom-margin is-ful">
+                            <div>
+                                The operators supported by the engine are listed in the table below.
                             </div>
-                            <div className="column">
-                                <div className="container is-fluid has-bottom-margin">
-                                    <div>
-                                        The PAD DB Search Engine provides an intuitive way to filter PAD data through a custom query system
-                                        powered by the magic of ElasticSearch.
-                                    </div>
-                                    <div>
-                                        The engine accepts the logical operators for functions like "greater than", "less than", and "equals"
-                                        as well as certain key words, such as "and" to filter down data based on a set of given specifications.
-                                    </div>
-                                    <div>
-                                        Consider the following query:
-                                    </div>
-                                    <div>
-                                        <pre>
-                                            <code>
-                                                attribute = wood and awakenings = 7c, unbindable
-                                            </code>
-                                        </pre>
-                                    </div>
-                                    <div>
-                                        This query searches for all monsters that have an "attribute" value of "wood" the reduces that result set down
-                                        by the monsters that have both a 7C (Enhanced Combo) and Unbindable (Resistance Bind) awoken skill.
-                                    </div>
-                                    <div>
-                                        If we wanted to filter this down even more, we could add another clause of
-                                    </div>
-                                    <div>
-                                        <pre>
-                                            <code>
-                                                types = dragon, god
-                                            </code>
-                                        </pre>
-                                    </div>
-                                    <div>
-                                        To give us a final query of
-                                    </div>
-                                    <div>
-                                        <pre>
-                                            <code>
-                                                attribute = wood and awakenings = 7c, unbindable and types = dragon, god
-                                            </code>
-                                        </pre>
-                                    </div>
-                                    <div>
-                                        Try copying this query into the search engine and see what you find.
-                                    </div>
-                                </div>
+                            <table className="table is-fullwidth">
+                                <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Function</th>
+                                    <th>Example</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>  </td>
+                                    <td>Default search by name (no operator)</td>
+                                    <td>reincarnated anubis</td>
+                                </tr>
+                                <tr>
+                                    <td> &gt; </td>
+                                    <td>Greater Than</td>
+                                    <td>max atk > 4000</td>
+                                </tr>
+                                <tr>
+                                    <td> &lt; </td>
+                                    <td>Less Than</td>
+                                    <td> card id &lt; 100</td>
+                                </tr>
+                                <tr>
+                                    <td> &gt;=</td>
+                                    <td>Greater Than or Equal To</td>
+                                    <td> rarity >= 4000</td>
+                                </tr>
+                                <tr>
+                                    <td> &lt;=</td>
+                                    <td>Less Than or Equal To</td>
+                                    <td>min rcv &lt;= 0</td>
+                                </tr>
+                                <tr>
+                                    <td> = </td>
+                                    <td>Equals</td>
+                                    <td>name = ney</td>
+                                </tr>
+                                <tr>
+                                    <td> and </td>
+                                    <td>Logical And (between filters) </td>
+                                    <td>attribute = water and sub attribute = light</td>
+                                </tr>
+                                <tr>
+                                    <td> , </td>
+                                    <td>Logical And (local) ***</td>
+                                    <td>types = dragon, god</td>
+                                </tr>
+                                <tr>
+                                    <td> evolves into </td>
+                                    <td>Returns monsters that evolve into something similar to x</td>
+                                    <td>evolves into = ney </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                *** Currently only applies to types, awakenings, and super awakenings
                             </div>
                         </div>
                     </div>
@@ -71,4 +84,4 @@ class Overview extends React.Component {
     }
 }
 
-export default Overview;
+export default Operators;

@@ -2,16 +2,23 @@ import React from 'react';
 import NavBar from '../../components/nav/nav';
 import Main from '../../components/search_guide/main';
 import Overview from '../../components/search_guide/overview';
+import Operators from '../../components/search_guide/operators';
 
 class SearchGuide extends React.Component {
     constructor(props) {
         super(props);
         this.jumpToOverview = this.jumpToOverview.bind(this);
+        this.jumpToOperators = this.jumpToOperators.bind(this);
         this.overviewSection = React.createRef();
+        this.operatorsSection = React.createRef();
     }
 
     jumpToOverview() {
         this.overviewSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+
+    jumpToOperators() {
+        this.operatorsSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
     render() {
@@ -35,7 +42,7 @@ class SearchGuide extends React.Component {
                                 </p>
                                 <ul className="menu-list">
                                     <li><a onClick={this.jumpToOverview}>Overview</a></li>
-                                    <li><a>Operators</a></li>
+                                    <li><a onClick={this.jumpToOperators}>Operators</a></li>
                                     <li><a>Query Chart</a></li>
                                     <li><a>Examples</a></li>
                                 </ul>
@@ -45,6 +52,9 @@ class SearchGuide extends React.Component {
                 </section>
                 <div ref={this.overviewSection}>
                     <Overview />
+                </div>
+                <div ref={this.operatorsSection}>
+                    <Operators />
                 </div>
             </div>
         )
