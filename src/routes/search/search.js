@@ -10,14 +10,12 @@ class Search extends React.Component {
         this.state = {'searchResults': [], 'currentQuery': '', 'isSearching': false, 'index': 'monsters', 'showResults': false};
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.storeCurrentSearch = this.storeCurrentSearch.bind(this);
-        this.goToTop = this.goToTop.bind(this);
         this.resultsSection = React.createRef();
-        this.topSection = React.createRef()
     }
 
     handleKeyDown = (e) => {
         if (e.key === 'Enter') {
-            this.setState({'isSearching': true, 'showResults': true});
+            this.setState({'isSearching': true, 'showResults': true, 'searchResults': []});
             axios.get('https://api.pad-db.com/search/' + e.target.value)
                 .then((response) => {
                     this.setState({'searchResults': response.data, 'isSearching': false});
@@ -29,12 +27,6 @@ class Search extends React.Component {
         }
     };
 
-    goToTop= (e) => {
-        if (e.key === 'Enter') {
-            this.topSection.scrollIntoView({behavior: 'smooth', block: 'start'});
-        }
-    }
-
     storeCurrentSearch = (e) => {
         this.setState({'currentQuery': e.target.value});
     };
@@ -43,7 +35,7 @@ class Search extends React.Component {
         return (
             <div>
                 <NavBar/>
-                <section className="hero is-dark is-fullheight-with-navbar" ref={this.topSection}>
+                <section className="hero is-dark is-fullheight-with-navbar">
                     <div className="hero-body">
                         <div className="container">
                             <p className="title">
@@ -51,6 +43,9 @@ class Search extends React.Component {
                             </p>
                             <p className="subtitle">
                                 This search engine is a beta test of my query system powered by ElasticSearch.
+                            </p>
+                            <p className="subtitle">
+                                Check out the guide <a href={'/search-guide/'}>/search-guide/</a> to learn about how to query data.
                             </p>
                             <div className="field has-addons">
                                 <p className="control">

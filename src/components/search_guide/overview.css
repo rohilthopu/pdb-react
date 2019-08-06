@@ -1,0 +1,13 @@
+.main-title {
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.has-bottom-margin * {
+    margin-bottom: 3%;
+}
+
+.is-vertical-center {
+    display: flex;
+    align-items: center;
+}
