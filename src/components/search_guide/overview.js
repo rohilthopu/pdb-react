@@ -47,7 +47,7 @@ class Overview extends React.Component {
                             <div>
                                 <pre>
                                     <code>
-                                        types = dragon, god
+                                        type = dragon, god
                                     </code>
                                 </pre>
                             </div>
@@ -57,7 +57,7 @@ class Overview extends React.Component {
                             <div>
                                 <pre>
                                     <code>
-                                        attribute = wood and awakenings = 7c, unbindable and types = dragon, god
+                                        attribute = wood and awakenings = 7c, unbindable and type = dragon, god
                                     </code>
                                 </pre>
                             </div>

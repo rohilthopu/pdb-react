@@ -64,7 +64,7 @@ class Operators extends React.Component {
                                 <tr>
                                     <td> , </td>
                                     <td>Logical AND (local) ***</td>
-                                    <td>types = dragon, god</td>
+                                    <td>type = dragon, god</td>
                                 </tr>
                                 <tr>
                                     <td> x </td>
@@ -74,7 +74,7 @@ class Operators extends React.Component {
                                 <tr>
                                     <td> || </td>
                                     <td> Logical OR (combines two query sets together)</td>
-                                    <td>valkyrie ciel || types = healer</td>
+                                    <td>valkyrie ciel || type = healer</td>
                                 </tr>
                                 <tr>
                                     <td> evolves into </td>
@@ -87,7 +87,7 @@ class Operators extends React.Component {
                                 ** Applies to awakenings and super awakenings
                             </div>
                             <div>
-                                *** Applies to types, awakenings, and super awakenings
+                                *** Applies to type, awakenings, and super awakenings
                             </div>
                         </div>
                     </div>
