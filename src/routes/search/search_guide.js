@@ -1,10 +1,9 @@
 import React from 'react';
 import NavBar from '../../components/nav/nav';
-import Main from '../../components/search_guide/main';
 import Overview from '../../components/search_guide/overview';
 import Operators from '../../components/search_guide/operators';
 import Categories from '../../components/search_guide/categories';
-
+import Shortcuts from '../../components/search_guide/shortcuts';
 
 class SearchGuide extends React.Component {
     constructor(props) {
@@ -12,9 +11,11 @@ class SearchGuide extends React.Component {
         this.jumpToOverview = this.jumpToOverview.bind(this);
         this.jumpToOperators = this.jumpToOperators.bind(this);
         this.jumpToCategories = this.jumpToCategories.bind(this);
+        this.jumpToShortcuts = this.jumpToShortcuts.bind(this);
         this.overviewSection = React.createRef();
         this.operatorsSection = React.createRef();
         this.categoriesSection = React.createRef();
+        this.shortcutsSection = React.createRef();
     }
 
     jumpToOverview() {
@@ -27,6 +28,9 @@ class SearchGuide extends React.Component {
 
     jumpToCategories() {
         this.categoriesSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+    jumpToShortcuts() {
+        this.shortcutsSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
     render() {
@@ -51,7 +55,11 @@ class SearchGuide extends React.Component {
                                 <ul className="menu-list">
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li><a onClick={this.jumpToOverview}>Overview</a></li>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li><a onClick={this.jumpToOperators}>Operators</a></li>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                    <li><a onClick={this.jumpToShortcuts}>Shortcuts</a></li>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li><a onClick={this.jumpToCategories}>Categories</a></li>
                                 </ul>
                             </aside>
@@ -63,6 +71,9 @@ class SearchGuide extends React.Component {
                 </div>
                 <div ref={this.operatorsSection}>
                     <Operators />
+                </div>
+                <div ref={this.shortcutsSection}>
+                    <Shortcuts />
                 </div>
                 <div ref={this.categoriesSection}>
                     <Categories />

@@ -15,9 +15,8 @@ class Overview extends React.Component {
                     <div className="column">
                         <div className="container is-fluid has-bottom-margin">
                             <div>
-                                The PAD DB Search Engine provides an intuitive way to filter PAD data through a custom
-                                query system
-                                powered by the magic of ElasticSearch.
+                                The PAD DB Search Engine provides an intuitive way to filter PAD data through a lightweight
+                                query system powered by the magic of ElasticSearch.
                             </div>
                             <div>
                                 The engine accepts the logical operators for functions like "greater than", "less than",

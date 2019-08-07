@@ -98,7 +98,7 @@ class Categories extends React.Component {
                     158,
                     159
                 ],
-                "types": [
+                "type": [
                     "Devil",
                     "God",
                     "Balanced"

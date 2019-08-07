@@ -9,7 +9,8 @@ class SearchResults extends React.Component {
     }
 
     getMonsterLink(result) {
-        return 'https://www.pad-db.com/monster/' + String(result.card_id)
+        // return 'https://www.pad-db.com/monster/' + String(result.card_id)
+        return 'http://www.puzzledragonx.com/en/monster.asp?n=' + String(result.card_id)
     }
 
     render() {
@@ -44,7 +45,10 @@ class SearchResults extends React.Component {
                                                 <tr key={result.card_id}>
                                                     <td className="has-text-left">{result.card_id}</td>
                                                     <td className="has-text-centered"><a
-                                                        href={this.getMonsterLink(result)}>{result.name}</a></td>
+                                                        href={this.getMonsterLink(result)}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer">
+                                                        {result.name}</a></td>
                                                     <td className="has-text-centered">{result.max_hp}</td>
                                                     <td className="has-text-centered">{result.max_atk}</td>
                                                     <td className="has-text-centered">{result.max_rcv}</td>
