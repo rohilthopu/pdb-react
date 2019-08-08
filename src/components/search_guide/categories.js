@@ -83,6 +83,7 @@ class Categories extends React.Component {
                 "collab_id": 0,
                 "is_inheritable": true,
                 "is_collab": false,
+                "limit_mult": 10,
                 "server": "NA",
                 "evolution_materials": [
                     165,
@@ -105,7 +106,15 @@ class Categories extends React.Component {
                 ],
                 "attribute": "Dark",
                 "sub_attribute": "Dark",
-                "collab": ""
+                "collab": "",
+                "hp_mult": 1.0,
+                "atk_mult": 30.0,
+                "rcv_mult": 1.5,
+                "shield": 0,
+                "hp_mult_full": 1.0,
+                "atk_mult_full": 900.0,
+                "rcv_mult_full": 2.25,
+                "shield_full": 0
             },
             undefined,
             4
