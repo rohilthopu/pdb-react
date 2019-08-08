@@ -43,18 +43,18 @@ class Search extends React.Component {
                                 Welcome to the PAD DB search engine!
                             </p>
                             <p className="subtitle">
-                                Check out the guide at <a className="has-text-link" href={'/search-guide/'}>/search-guide/</a> to learn about how to query data.
+                                This search engine is works through a custom query engine powered by the magic of ElasticSearch.
                             </p>
                             <div className="field has-addons">
                                 <p className="control">
-                                    <span className="select is-rounded">
+                                    <span className="select is-rounded is-medium">
                                       <select>
                                         <option>Monsters</option>
                                       </select>
                                     </span>
                                 </p>
                                 <div className="control is-expanded">
-                                    <input id='search' className="input is-rounded" type="text"
+                                    <input id='search' className="input is-rounded is-medium" type="text"
                                            placeholder="Ex. attribute = wood and awakenings = 7c, unbindable"
                                            onKeyDown={this.handleKeyDown}
                                            onChange={this.storeCurrentSearch}
@@ -62,6 +62,9 @@ class Search extends React.Component {
                                     />
                                 </div>
                             </div>
+                            <p className="subtitle top-margin">
+                                Check out the guide at <a className="has-text-link" href={'/search-guide/'}>/search-guide/</a> to learn about how to query data.
+                            </p>
                         </div>
                     </div>
                 </section>

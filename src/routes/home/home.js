@@ -71,7 +71,7 @@ class Home extends React.Component {
                     </div>
                 </section>
                 <div className='columns is-centered column_margin'>
-                    <div className='column is-three-quarters'>
+                    <div className='column is-half'>
                         <div className='subtitle has-text-centered'>
                             <h1>Active Dungeons</h1>
                         </div>

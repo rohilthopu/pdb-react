@@ -35,7 +35,7 @@ class Overview extends React.Component {
                                 </pre>
                             </div>
                             <div>
-                                This query searches for all monsters that have an "attribute" value of "wood" the
+                                This query searches for all monsters that have an "attribute" value of "wood", then
                                 reduces that result set down
                                 by the monsters that have both a 7C (Enhanced Combo) and Unbindable (Resistance Bind)
                                 awoken skill.

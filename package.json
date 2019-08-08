@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
-    "bulma": "^0.7.5",
     "cors": "^2.8.5",
     "pm2": "^3.5.1",
     "react": "^16.8.6",

@@ -17,7 +17,7 @@ class ActiveGuerrilla extends React.Component {
         }
 
         return (
-            <table className="table is-fullwidth is-hoverable">
+            <table className="table is-fullwidth is-hoverable is-dark">
                 <thead>
                 <tr>
                     <th className="has-text-left">Dungeon</th>

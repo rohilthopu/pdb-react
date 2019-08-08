@@ -17,8 +17,6 @@ class Attributes extends React.Component {
                 "attribute_id": 4,
                 "sub_attribute_id": 4,
                 "is_ult": false,
-                "type_1_id": 7,
-                "type_2_id": 5,
                 "rarity": 8,
                 "cost": 45,
                 "max_level": 99,
@@ -48,12 +46,9 @@ class Attributes extends React.Component {
                     "Resistance-Cloud",
                     "Resistance-Board Restrict"
                 ],
-                "type_3_id": 1,
                 "sell_mp": 5000,
-                "collab_id": 0,
                 "is_inheritable": true,
                 "is_collab": false,
-                "limit_mult": 10,
                 "server": "NA",
                 "evolution_materials": [
                     "Purple Evolution Mask",
