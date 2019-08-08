@@ -24,28 +24,14 @@ class Categories extends React.Component {
                 "max_level": 99,
                 "min_hp": 1674,
                 "max_hp": 5048,
-                "hp_scale": 1.0,
                 "min_atk": 675,
                 "max_atk": 1450,
-                "atk_scale": 1.0,
                 "min_rcv": 309,
                 "max_rcv": 618,
-                "rcv_scale": 1.0,
                 "xp_max": 16000000,
-                "xp_scale": 2.5,
                 "active_skill_id": 1872,
                 "leader_skill_id": 6486,
                 "ancestor_id": 2013,
-                "evo_mat_1": 165,
-                "evo_mat_2": 165,
-                "evo_mat_3": 165,
-                "evo_mat_4": 165,
-                "evo_mat_5": 165,
-                "un_evo_mat_1": 155,
-                "un_evo_mat_2": 156,
-                "un_evo_mat_3": 157,
-                "un_evo_mat_4": 158,
-                "un_evo_mat_5": 159,
                 "awakenings_raw": [
                     10,
                     10,
@@ -107,14 +93,6 @@ class Categories extends React.Component {
                 "attribute": "Dark",
                 "sub_attribute": "Dark",
                 "collab": "",
-                "hp_mult": 1.0,
-                "atk_mult": 30.0,
-                "rcv_mult": 1.5,
-                "shield": 0,
-                "hp_mult_full": 1.0,
-                "atk_mult_full": 900.0,
-                "rcv_mult_full": 2.25,
-                "shield_full": 0
             },
             undefined,
             4
@@ -135,11 +113,11 @@ class Categories extends React.Component {
                     <div className="column is-bordered">
                         <div className="container is-fluid has-bottom-margin is-ful">
                             <div>
-                                The following is an example of monster objects categories that can be queried against.
+                                The following is an example of monster JSON object retrieved from ElasticSearch.
                             </div>
 
                             <div>
-                                All categories can be queried without underscores, but need to be in the correct order. For example,
+                                All categories can be queried with or without underscores, but need to be in the correct order. For example,
                             </div>
                             <pre>
                                 <code>
