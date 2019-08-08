@@ -105,7 +105,10 @@ class Aliases extends React.Component {
                     </div>
                     <div className="column is-bordered has-bottom-margin">
                         <div className="container is-fluid">
-                            The following are some aliases that I use to simplify queries against categories
+                            The following are some aliases that I use to simplify queries against categories.
+                        </div>
+                        <div className="container is-fluid">
+                            Feel free to send me some suggestions for considerations.
                         </div>
                         <div className="columns is-centered">
                             <div className="column">
