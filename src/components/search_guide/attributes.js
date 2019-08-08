@@ -2,7 +2,7 @@ import React from 'react';
 import './overview.css';
 
 
-class Categories extends React.Component {
+class Attributes extends React.Component {
 
     constructor(props) {
         super(props);
@@ -32,22 +32,6 @@ class Categories extends React.Component {
                 "active_skill_id": 1872,
                 "leader_skill_id": 6486,
                 "ancestor_id": 2013,
-                "awakenings_raw": [
-                    10,
-                    10,
-                    19,
-                    9,
-                    19,
-                    28,
-                    21,
-                    9,
-                    20
-                ],
-                "super_awakenings_raw": [
-                    58,
-                    54,
-                    55
-                ],
                 "awakenings": [
                     "Resistance-Bind",
                     "Resistance-Bind",
@@ -72,18 +56,18 @@ class Categories extends React.Component {
                 "limit_mult": 10,
                 "server": "NA",
                 "evolution_materials": [
-                    165,
-                    165,
-                    165,
-                    165,
-                    165
+                    "Purple Evolution Mask",
+                    "Purple Evolution Mask",
+                    "Purple Evolution Mask",
+                    "Purple Evolution Mask",
+                    "Purple Evolution Mask"
                 ],
                 "un_evolution_materials": [
-                    155,
-                    156,
-                    157,
-                    158,
-                    159
+                    "Rubylit",
+                    "Sapphilit",
+                    "Emelit",
+                    "Topalit",
+                    "Amelit"
                 ],
                 "type": [
                     "Devil",
@@ -107,7 +91,7 @@ class Categories extends React.Component {
                 <div className="columns is-desktop is-centered main-title">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
-                            <h1 className="title">Categories</h1>
+                            <h1 className="title">Query Attributes</h1>
                         </div>
                     </div>
                     <div className="column is-bordered">
@@ -117,7 +101,7 @@ class Categories extends React.Component {
                             </div>
 
                             <div>
-                                All categories can be queried with or without underscores, but need to be in the correct order. For example,
+                                All query attributes can be queried with or without underscores, but need to be in the correct order. For example,
                             </div>
                             <pre>
                                 <code>
@@ -130,6 +114,30 @@ class Categories extends React.Component {
                             <pre>
                                 <code>
                                     attribute_sub_id = 4 or id attribute sub = 4
+                                </code>
+                            </pre>
+                            <div>
+                                Attributes that have a list of values (type, awoken skills, evo mats) should be queried by their
+                                english value rather than their raw value. For example,
+                            </div>
+                            <pre>
+                                <code>
+                                    super awakenings = 10c
+                                </code>
+                            </pre>
+                            <pre>
+                                <code>
+                                    awakenings = 7c x4
+                                </code>
+                            </pre>
+                            <pre>
+                                <code>
+                                    evolution materials = keeper of gold
+                                </code>
+                            </pre>
+                            <pre>
+                                <code>
+                                    type = dragon, god
                                 </code>
                             </pre>
                             <div>
@@ -149,4 +157,4 @@ class Categories extends React.Component {
     }
 }
 
-export default Categories;
+export default Attributes;

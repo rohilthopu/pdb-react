@@ -22,59 +22,59 @@ class Operators extends React.Component {
                                 <tr>
                                     <th>Operator</th>
                                     <th>Function</th>
-                                    <th>Example</th>
+                                    <th className="has-text-right">Example</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>  </td>
                                     <td>Default search by name (no operator)</td>
-                                    <td>reincarnated anubis</td>
+                                    <td className="has-text-right">reincarnated anubis</td>
                                 </tr>
                                 <tr>
                                     <td> &gt; </td>
                                     <td>Greater Than</td>
-                                    <td>max atk > 4000</td>
+                                    <td className="has-text-right">max atk > 4000</td>
                                 </tr>
                                 <tr>
                                     <td> &lt; </td>
                                     <td>Less Than</td>
-                                    <td> card id &lt; 100</td>
+                                    <td className="has-text-right"> card id &lt; 100</td>
                                 </tr>
                                 <tr>
                                     <td> &gt;=</td>
                                     <td>Greater Than or Equal To</td>
-                                    <td> rarity >= 4000</td>
+                                    <td className="has-text-right"> rarity >= 4000</td>
                                 </tr>
                                 <tr>
                                     <td> &lt;=</td>
                                     <td>Less Than or Equal To</td>
-                                    <td>min rcv &lt;= 0</td>
+                                    <td className="has-text-right">min rcv &lt;= 0</td>
                                 </tr>
                                 <tr>
                                     <td> = </td>
                                     <td>Equals</td>
-                                    <td>name = ney</td>
+                                    <td className="has-text-right">name = ney</td>
                                 </tr>
                                 <tr>
                                     <td> and </td>
                                     <td>Logical AND (between filters) </td>
-                                    <td>attribute = water and sub attribute = light</td>
+                                    <td className="has-text-right">attribute = water and sub attribute = light</td>
                                 </tr>
                                 <tr>
                                     <td> , </td>
                                     <td>Logical AND (local) *</td>
-                                    <td>type = dragon, god</td>
+                                    <td className="has-text-right">type = dragon, god</td>
                                 </tr>
                                 <tr>
                                     <td> x </td>
                                     <td> Amount **</td>
-                                    <td>awakenings = 7c x4</td>
+                                    <td className="has-text-right">awakenings = 7c x4</td>
                                 </tr>
                                 <tr>
                                     <td> || </td>
                                     <td> Logical OR (combines two query sets together)</td>
-                                    <td>valkyrie ciel || type = healer</td>
+                                    <td className="has-text-right">valkyrie ciel || type = healer</td>
                                 </tr>
                                 </tbody>
                             </table>

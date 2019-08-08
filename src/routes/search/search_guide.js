@@ -2,8 +2,9 @@ import React from 'react';
 import NavBar from '../../components/nav/nav';
 import Overview from '../../components/search_guide/overview';
 import Operators from '../../components/search_guide/operators';
-import Categories from '../../components/search_guide/categories';
+import Attributes from '../../components/search_guide/attributes';
 import Shortcuts from '../../components/search_guide/shortcuts';
+import Aliases from '../../components/search_guide/aliases';
 
 class SearchGuide extends React.Component {
     constructor(props) {
@@ -12,11 +13,13 @@ class SearchGuide extends React.Component {
         this.jumpToOperators = this.jumpToOperators.bind(this);
         this.jumpToCategories = this.jumpToCategories.bind(this);
         this.jumpToShortcuts = this.jumpToShortcuts.bind(this);
+        this.jumpToAliases = this.jumpToAliases.bind(this);
         this.overviewSection = React.createRef();
         this.operatorsSection = React.createRef();
         this.categoriesSection = React.createRef();
         this.shortcutsSection = React.createRef();
-    }
+        this.aliasesSection = React.createRef()
+;    }
 
     jumpToOverview() {
         this.overviewSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
@@ -29,14 +32,19 @@ class SearchGuide extends React.Component {
     jumpToCategories() {
         this.categoriesSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
+
     jumpToShortcuts() {
         this.shortcutsSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+
+    jumpToAliases() {
+        this.aliasesSection.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
     render() {
         return (
             <div>
-                <NavBar />
+                <NavBar/>
                 <section className="hero is-dark is-fullheight">
                     <div className="hero-body">
                         <div className="container">
@@ -60,23 +68,28 @@ class SearchGuide extends React.Component {
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li><a onClick={this.jumpToShortcuts}>Shortcuts</a></li>
                                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                    <li><a onClick={this.jumpToCategories}>Categories</a></li>
+                                    <li><a onClick={this.jumpToAliases}>Query Aliases</a></li>
+                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                                    <li><a onClick={this.jumpToCategories}>Query Attributes</a></li>
                                 </ul>
                             </aside>
                         </div>
                     </div>
                 </section>
                 <div ref={this.overviewSection}>
-                    <Overview />
+                    <Overview/>
                 </div>
                 <div ref={this.operatorsSection}>
-                    <Operators />
+                    <Operators/>
                 </div>
                 <div ref={this.shortcutsSection}>
-                    <Shortcuts />
+                    <Shortcuts/>
+                </div>
+                <div ref={this.aliasesSection}>
+                    <Aliases/>
                 </div>
                 <div ref={this.categoriesSection}>
-                    <Categories />
+                    <Attributes/>
                 </div>
             </div>
         )
