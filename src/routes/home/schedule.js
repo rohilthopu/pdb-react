@@ -5,7 +5,7 @@ import ActiveGuerrilla from '../../components/guerrilla/active_guerrilla.js'
 import UpcomingGuerrilla from '../../components/guerrilla/upcoming_guerrilla.js'
 import './home.css';
 
-class Home extends React.Component {
+class Schedule extends React.Component {
 
     constructor(props) {
         super(props);
@@ -87,4 +87,4 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+export default Schedule;
