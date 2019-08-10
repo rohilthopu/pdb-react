@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../../components/nav/nav";
-import NameSection from "../../components/monster/name_section";
+import NameSection from "../../components/monster/monster_header";
 import MonsterOverview from "../../components/monster/monster_overview";
 import Awakenings from "../../components/monster/awakenings";
 import LeaderSkill from '../../components/monster/leader_skill';

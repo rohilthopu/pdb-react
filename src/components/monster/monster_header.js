@@ -9,6 +9,7 @@ export default class NameSection extends Component {
         this.getFullImageLink = this.getFullImageLink.bind(this);
         this.getAltPortraitImageLink = this.getAltPortraitImageLink.bind(this);
         this.getAltFullImageLink = this.getAltFullImageLink.bind(this);
+        this.makeRarityIcons = this.makeRarityIcons.bind(this);
     }
 
     getPortraitImageLink() {
@@ -43,6 +44,14 @@ export default class NameSection extends Component {
         );
     }
 
+    makeRarityIcons() {
+        let icons = [];
+        for (let i = 0; i < this.props.monster.rarity; i++) {
+            icons.push(<i key={i} className="fas fa-star" />);
+        }
+        return <div>{icons.map(icon => icon)}</div>;
+    }
+
     render() {
         return (
             <div className="hero is-dark is-fullheight">
@@ -54,8 +63,11 @@ export default class NameSection extends Component {
                                 src={this.getPortraitImageLink()}
                                 alt={this.getAltPortraitImageLink()}
                             />
-                            <div className="title">
-                                {this.props.monster.name}
+                            <div>
+                                <div className="title">
+                                    {this.props.monster.name}
+                                </div>
+                                {this.makeRarityIcons()}
                             </div>
                         </div>
                     </div>
