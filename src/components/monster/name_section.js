@@ -80,6 +80,11 @@ export default class NameSection extends Component {
                                         Awoken Skills
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link smooth to="#leaderskill">
+                                        Leader Skill
+                                    </Link>
+                                </li>
                             </ul>
                         </aside>
                     </div>

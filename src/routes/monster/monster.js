@@ -3,6 +3,8 @@ import NavBar from "../../components/nav/nav";
 import NameSection from "../../components/monster/name_section";
 import MonsterOverview from "../../components/monster/monster_overview";
 import Awakenings from "../../components/monster/awakenings";
+import LeaderSkill from '../../components/monster/leader_skill';
+import ActiveSkill from '../../components/monster/active_skill';
 
 import Axios from "axios";
 
@@ -62,6 +64,12 @@ export default class Monster extends Component {
                 </div>
                 <div id="awakenings">
                     <Awakenings monster={this.state.monster} />
+                </div>
+                <div id="activeskill">
+                    <ActiveSkill skill={this.state.activeSkill} />
+                </div>
+                <div id="leaderskill">
+                    <LeaderSkill leaderSkill={this.state.leaderSkill} />
                 </div>
             </div>
         );

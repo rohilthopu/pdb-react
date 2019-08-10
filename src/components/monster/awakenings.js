@@ -6,6 +6,7 @@ export default class Awakenings extends Component {
         super(props);
         this.getAwokenImageLink = this.getAwokenImageLink.bind(this);
         this.makeAwokenSkills = this.makeAwokenSkills.bind(this);
+        this.makeTextAwokenSkills = this.makeTextAwokenSkills.bind(this);
     }
 
     getAwokenImageLink(skill) {
@@ -21,7 +22,7 @@ export default class Awakenings extends Component {
         if (awokenSkills != null) {
             return (
                 <div>
-                    {awokenSkills.map( (skill, index) => (
+                    {awokenSkills.map((skill, index) => (
                         <img
                             key={index}
                             src={this.getAwokenImageLink(skill)}
@@ -37,12 +38,20 @@ export default class Awakenings extends Component {
         return <div />;
     }
 
+    makeTextAwokenSkills(awokenSkills) {
+        console.log(awokenSkills);
+        if (awokenSkills != null) {
+            return awokenSkills.join(", ");
+        }
+        return <div />;
+    }
+
     render() {
         return (
             <div className="box">
                 <div className="main-title">
                     <div className="columns is-centered main-title">
-                        <div className="column is-one-third">
+                        <div className="column is-half">
                             <div className="container is-fluid">
                                 <h1 className="title">Awoken Skills</h1>
                             </div>

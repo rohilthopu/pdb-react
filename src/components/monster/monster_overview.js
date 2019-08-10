@@ -7,7 +7,7 @@ export default class MonsterOverview extends Component {
             <div className="box">
                 <div className="main-title">
                     <div className="columns is-centered main-title">
-                        <div className="column is-one-third">
+                        <div className="column is-half">
                             <div className="container is-fluid">
                                 <h1 className="title">Monster Overview</h1>
                             </div>
