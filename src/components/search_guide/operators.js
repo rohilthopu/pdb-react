@@ -6,7 +6,7 @@ class Operators extends React.Component {
     render() {
         return (
             <div className="box">
-                <div className="columns is-desktop is-centered main-title">
+                <div className="columns is-centered main-title">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Operators</h1>

@@ -1,4 +1,16 @@
 .margin-top {
     margin-top: 3%;
-    margin-left: 5%;
+    margin-left: 6%;
+}
+
+.has-bottom-margin * {
+    margin-bottom: 3%;
+}
+
+.main-title {
+    margin-top: 3%
+}
+
+.a-little-space {
+    margin-right: 2%
 }

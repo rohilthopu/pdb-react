@@ -47,8 +47,8 @@ export default class NameSection extends Component {
         return (
             <div className="hero is-dark is-fullheight">
                 <div className="hero-head margin-top">
-                    <div className="container is-fluid is-centered">
-                        <div className="is-desktop">
+                    <div className="container is-fluid">
+                        <div>
                             <img
                                 src={this.getPortraitImageLink()}
                                 alt={this.getAltPortraitImageLink()}
@@ -71,8 +71,13 @@ export default class NameSection extends Component {
                             <p className="menu-label">SECTIONS</p>
                             <ul className="menu-list">
                                 <li>
-                                    <Link smooth to="#name-2">
+                                    <Link smooth to="#overview">
                                         Overview
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link smooth to="#awakenings">
+                                        Awoken Skills
                                     </Link>
                                 </li>
                             </ul>
