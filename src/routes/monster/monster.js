@@ -21,29 +21,29 @@ export default class Monster extends Component {
             .then(response => {
                 console.log(response.data);
                 this.setState({ monster: response.data });
+            })
+            .catch(err => {
+                console.log(err);
+            });
 
-                Axios.get(
-                    "https://api.pad-db.com/api/skill/" +
-                        String(this.state.monster.active_skill_id)
-                )
-                    .then(response => {
-                        console.log(response.data);
-                        this.setState({ activeSkill: response.data });
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    });
-                Axios.get(
-                    "https://api.pad-db.com/api/skill/" +
-                        String(this.state.monster.leader_skill_id)
-                )
-                    .then(response => {
-                        console.log(response.data);
-                        this.setState({ activeSkill: response.data });
-                    })
-                    .catch(err => {
-                        console.log(err);
-                    });
+        Axios.get(
+            "https://api.pad-db.com/api/skill/" +
+                String(this.state.monster.active_skill_id)
+        )
+            .then(response => {
+                console.log(response.data);
+                this.setState({ activeSkill: response.data });
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        Axios.get(
+            "https://api.pad-db.com/api/skill/" +
+                String(this.state.monster.leader_skill_id)
+        )
+            .then(response => {
+                console.log(response.data);
+                this.setState({ activeSkill: response.data });
             })
             .catch(err => {
                 console.log(err);

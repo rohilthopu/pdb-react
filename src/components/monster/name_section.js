@@ -4,20 +4,16 @@ export default class NameSection extends Component {
     constructor(props) {
         super(props);
         this.getPortraitImageLink = this.getPortraitImageLink.bind(this);
-        this.get = this.get.bind(this);
     }
 
     getPortraitImageLink() {
         return (
             "https://api.pad-db.com/static/padimages/portrait/" +
-            this.get("card_id") +
+            String(this.props.monster.card_id) +
             ".png"
         );
     }
 
-    get(property) {
-        return this.props.monster[property];
-    }
 
     render() {
         return (
@@ -26,11 +22,11 @@ export default class NameSection extends Component {
                     <div className="container is-fluid">
                         <img
                             src={this.getPortraitImageLink()}
-                            alt="pad_image"
+                            alt="img"
                             height="75"
                             width="75"
                         />
-                        <div className="title">{this.get('name')}</div>
+                        <div className="title">{this.props.monster.name}</div>
                     </div>
                 </div>
             </div>
