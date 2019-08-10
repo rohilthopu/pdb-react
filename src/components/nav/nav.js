@@ -12,17 +12,6 @@ class NavBar extends React.Component {
                         </a>
                         <a className='navbar-item' href='/search-guide/'>Search Guide</a>
                         <a className='navbar-item' href='/schedule/'>Schedule</a>
-                        {/*<div className="navbar-item has-dropdown is-hoverable">*/}
-                        {/*    <a className="navbar-link" href="/">*/}
-                        {/*        <span className="icon"><i className="fas fa-globe-americas"/></span>*/}
-                        {/*        <span>Data</span>*/}
-                        {/*    </a>*/}
-                        {/*    <div className="navbar-dropdown">*/}
-                        {/*        <a className="navbar-item" href="/">*/}
-                        {/*            Monsters*/}
-                        {/*        </a>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
                     </div>
                 </div>
             </nav>

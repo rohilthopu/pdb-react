@@ -110,31 +110,21 @@ class Aliases extends React.Component {
                         <div className="container is-fluid">
                             Feel free to send me some suggestions for considerations.
                         </div>
-                        <div className="columns is-centered">
-                            <div className="column">
-                                <div className="container is-fluid">
-                                    Attribute Aliases
-                                </div>
-                                <div className="container is-fluid">
-                                    <pre>
-                                        <code>
-                                            {this.stringifyAttributes()}
-                                        </code>
-                                    </pre>
-                                </div>
-                            </div>
-                            <div className="column">
-                                <div className="container is-fluid">
-                                    Awoken Skill Aliases
-                                </div>
-                                <div className="container is-fluid">
-                                    <pre>
-                                        <code>
-                                            {this.stringifyAwakenings()}
-                                        </code>
-                                    </pre>
-                                </div>
-                            </div>
+
+                        <div className="container is-fluid">
+                            <pre>
+                                <code>
+                                    {this.stringifyAttributes()}
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div className="container is-fluid">
+                            <pre>
+                                <code>
+                                    {this.stringifyAwakenings()}
+                                </code>
+                            </pre>
                         </div>
                         <div className="container is-fluid">
                             For example, you might do a query such as
