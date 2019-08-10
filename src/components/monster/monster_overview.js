@@ -14,10 +14,6 @@ export default class MonsterOverview extends Component {
                         </div>
                         <div className="column is-bordered">
                             <div className="container is-fluid has-bottom-margin">
-                                <div>
-                                    {this.props.monster.name} has the following
-                                    stats:
-                                </div>
                                 <table className="table is-fullwidth">
                                     <thead>
                                         <tr>
