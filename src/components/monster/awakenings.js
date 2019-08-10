@@ -6,7 +6,6 @@ export default class Awakenings extends Component {
         super(props);
         this.getAwokenImageLink = this.getAwokenImageLink.bind(this);
         this.makeAwokenSkills = this.makeAwokenSkills.bind(this);
-        this.makeTextAwokenSkills = this.makeTextAwokenSkills.bind(this);
     }
 
     getAwokenImageLink(skill) {
@@ -35,15 +34,7 @@ export default class Awakenings extends Component {
                 </div>
             );
         }
-        return <div />;
-    }
-
-    makeTextAwokenSkills(awokenSkills) {
-        console.log(awokenSkills);
-        if (awokenSkills != null) {
-            return awokenSkills.join(", ");
-        }
-        return <div />;
+        return <div>None</div>;
     }
 
     render() {
@@ -58,18 +49,15 @@ export default class Awakenings extends Component {
                         </div>
                         <div className="column is-bordered">
                             <div className="container is-fluid has-bottom-margin">
-                                <div>
-                                    {this.props.monster.name} has the following
-                                    Awoken Skills:
-                                </div>
-
-                                <div>Awoken Skills</div>
+                                <div className="subtitle">Awoken Skills</div>
 
                                 {this.makeAwokenSkills(
                                     this.props.monster.awakenings_raw
                                 )}
 
-                                <div>Super Awoken Skills</div>
+                                <div className="subtitle">
+                                    Super Awoken Skills
+                                </div>
 
                                 {this.makeAwokenSkills(
                                     this.props.monster.super_awakenings_raw

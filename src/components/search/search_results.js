@@ -11,7 +11,7 @@ class SearchResults extends React.Component {
 
     getMonsterLink(result) {
         return (
-            "http://www.puzzledragonx.com/en/monster.asp?n=" +
+            "/monster/" +
             String(result.card_id)
         );
     }

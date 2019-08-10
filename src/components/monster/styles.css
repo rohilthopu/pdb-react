@@ -14,3 +14,7 @@
 .a-little-space {
     margin-right: 2%
 }
+
+.monster-header {
+    display: flex;
+}

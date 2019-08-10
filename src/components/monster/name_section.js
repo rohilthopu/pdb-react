@@ -48,8 +48,9 @@ export default class NameSection extends Component {
             <div className="hero is-dark is-fullheight">
                 <div className="hero-head margin-top">
                     <div className="container is-fluid">
-                        <div>
+                        <div className="monster-header">
                             <img
+                                className="a-little-space"
                                 src={this.getPortraitImageLink()}
                                 alt={this.getAltPortraitImageLink()}
                             />
