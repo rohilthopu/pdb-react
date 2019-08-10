@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import NavBar from '../../components/nav/nav'
 import SearchResults from '../../components/search/search_results';
+import SearchBar from '../../components/search/search_bar';
 
 class Search extends React.Component {
 
@@ -53,14 +54,7 @@ class Search extends React.Component {
                                       </select>
                                     </span>
                                 </p>
-                                <div className="control is-expanded">
-                                    <input id='search' className="input is-rounded is-medium" type="text"
-                                           placeholder="Ex. attribute = wood and awakenings = 7c, unbindable"
-                                           onKeyDown={this.handleKeyDown}
-                                           onChange={this.storeCurrentSearch}
-                                           value={this.state.currentQuery}
-                                    />
-                                </div>
+                                <SearchBar handleKeyDown={this.handleKeyDown} storeCurrentSearch={this.storeCurrentSearch} currentQuery={this.state.currentQuery} />
                             </div>
                             <p className="subtitle top-margin">
                                 Check out the guide at <a className="has-text-link" href={'/search-guide/'}>/search-guide/</a> to learn about how to query data.
