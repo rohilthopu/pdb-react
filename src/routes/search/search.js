@@ -71,7 +71,7 @@ class Search extends React.Component {
                                 />
                             </div>
                             <p className="subtitle top-margin">
-                                Check out the guide at
+                                Check out the guide at{" "}
                                 <a
                                     className="has-text-link"
                                     href={"/search-guide/"}
