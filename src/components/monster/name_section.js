@@ -81,6 +81,11 @@ export default class NameSection extends Component {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link smooth to="#activeskill">
+                                        Active Skill
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link smooth to="#leaderskill">
                                         Leader Skill
                                     </Link>
