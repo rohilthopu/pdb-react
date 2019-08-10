@@ -97,50 +97,42 @@ class Aliases extends React.Component {
     render() {
         return (
             <div className="box">
-                <div className="columns is-desktop is-centered main-title">
+                <div className="columns is-centered main-title">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Aliases</h1>
                         </div>
                     </div>
-                    <div className="column is-bordered has-bottom-margin">
-                        <div className="container is-fluid">
-                            The following are some aliases that I use to simplify queries against categories.
-                        </div>
-                        <div className="container is-fluid">
-                            Feel free to send me some suggestions for considerations.
-                        </div>
-
-                        <div className="container is-fluid">
+                    <div className="column is-bordered">
+                        <div className="container is-fluid has-bottom-margin">
+                            <div>
+                                The following are some aliases that I use to simplify queries against categories.
+                            </div>
+                            <div>
+                                Feel free to send me some suggestions for considerations.
+                            </div>
                             <pre>
                                 <code>
                                     {this.stringifyAttributes()}
                                 </code>
                             </pre>
-                        </div>
-
-                        <div className="container is-fluid">
                             <pre>
                                 <code>
                                     {this.stringifyAwakenings()}
                                 </code>
                             </pre>
-                        </div>
-                        <div className="container is-fluid">
-                            For example, you might do a query such as
-                        </div>
-                        <div className="container is-fluid">
+                            <div>
+                                For example, you might do a query such as
+                            </div>
                             <pre>
                                 <code>
                                     has evomat = machine athena gem and atkmf > 100 and awakenings = te, god killer
                                 </code>
                             </pre>
-                        </div>
-                        <div className="container is-fluid">
-                            Which would yield
-                        </div>
-                        <div className="container is-fluid">
-                           <pre>
+                            <div>
+                                Which would yield
+                            </div>
+                            <pre>
                                <code>
                                     Destructive Machine God, Ragnarok Dragon
                                 </code>

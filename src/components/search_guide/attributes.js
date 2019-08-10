@@ -90,7 +90,7 @@ class Attributes extends React.Component {
                         </div>
                     </div>
                     <div className="column is-bordered">
-                        <div className="container is-fluid has-bottom-margin is-ful">
+                        <div className="container is-fluid has-bottom-margin">
                             <div>
                                 The following is an example of monster JSON object retrieved from ElasticSearch.
                             </div>
