@@ -54,6 +54,7 @@ export default class Monster extends Component {
         return (
             <div>
                 <NavBar />
+                <NameSection monster={this.state.monster} />
             </div>
         );
     }
