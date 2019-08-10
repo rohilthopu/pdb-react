@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import "./styles.css";
 
 export default class NameSection extends Component {
@@ -69,13 +70,10 @@ export default class NameSection extends Component {
                         <aside className="menu is-large">
                             <p className="menu-label">SECTIONS</p>
                             <ul className="menu-list">
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                 <li>
-                                    <a>Overview</a>
-                                </li>
-                                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                                <li>
-                                    <a>Operators</a>
+                                    <Link smooth to="#name-2">
+                                        Overview
+                                    </Link>
                                 </li>
                             </ul>
                         </aside>

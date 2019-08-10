@@ -25,31 +25,26 @@ class SearchGuide extends React.Component {
                             <aside className="menu is-large">
                                 <p className="menu-label">SECTIONS</p>
                                 <ul className="menu-list">
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li>
                                         <Link smooth to="#overview">
                                             Overview
                                         </Link>
                                     </li>
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li>
                                         <Link smooth to="#operators">
                                             Operators
                                         </Link>
                                     </li>
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li>
                                         <Link smooth to="#shortcuts">
                                             Shortcuts
                                         </Link>{" "}
                                     </li>
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li>
                                         <Link smooth to="#aliases">
                                             Attribute Aliases
                                         </Link>
                                     </li>
-                                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                                     <li>
                                         <Link smooth to="#attributes">
                                             Object Attributes
