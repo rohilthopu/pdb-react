@@ -31,7 +31,6 @@ class SearchResults extends React.Component {
                             (skill) => (
                                 <img src={this.getAwokenImageLink(skill)}
                                      className="a-little-space"
-                                     alt="awoken_skill"
                                      height="22"
                                      width="22"
                                 />
@@ -57,7 +56,7 @@ class SearchResults extends React.Component {
                                 Query Results
                             </p>
                         </div>
-                        <table className="table is-fullwidth is-hoverable bottom-space is-narrow">
+                        <table className="table is-fullwidth is-hoverable bottom-space">
                             <thead>
                             <tr>
                                 <th className="has-text-left"/>
