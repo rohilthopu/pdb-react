@@ -1,13 +1,13 @@
 import React, { Component } from "react";
+import Axios from "axios";
 import NavBar from "../../components/nav/nav";
 import NameSection from "../../components/monster/monster_header";
 import MonsterOverview from "../../components/monster/monster_overview";
 import Awakenings from "../../components/monster/awakenings";
-import LeaderSkill from "../../components/monster/leader_skill";
-import ActiveSkill from "../../components/monster/active_skill";
-import Evolutions from '../../components/monster/evolutions';
-
-import Axios from "axios";
+import LeaderSkill from "../../components/monster/skills/leader_skill";
+import ActiveSkill from "../../components/monster/skills/active_skill";
+import Evolutions from '../../components/monster/evolutions/evolutions';
+import Ancestor from "../../components/monster/evolutions/ancestor";
 
 export default class Monster extends Component {
     constructor(props) {
@@ -66,11 +66,14 @@ export default class Monster extends Component {
                 <div id="overview">
                     <MonsterOverview monster={this.state.monster} />
                 </div>
-                <div>
-                    <Evolutions monster={this.state.monster}/>
-                </div>
                 <div id="awakenings">
                     <Awakenings monster={this.state.monster} />
+                </div>
+                <div id="evolutions">
+                    <Evolutions monster={this.state.monster}/>
+                </div>
+                <div id="ancestor">
+                    <Ancestor monster={this.state.monster}/>
                 </div>
                 <div id="activeskill">
                     <ActiveSkill skill={this.state.activeSkill} />

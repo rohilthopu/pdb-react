@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import "./styles.css";
-import EvolutionTable from "./evolutions/evolution_table";
+import "../styles.css";
+import EvolutionTable from "./evolution_table";
 
 export default class Evolutions extends Component {
 
