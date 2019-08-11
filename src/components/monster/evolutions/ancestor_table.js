@@ -16,7 +16,7 @@ export default class AncestorTable extends Component {
     }
 
     render() {
-        if (this.props.ancestor) {
+        if (this.props.ancestor.card_id != null) {
             return (
                 <div>
                     <table className="table is-fullwidth">
