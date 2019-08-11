@@ -89,6 +89,11 @@ export default class NameSection extends Component {
                                     </Link>
                                 </li>
                                 <li>
+                                    <Link smooth to="#awakenings">
+                                        Awoken Skills
+                                    </Link>
+                                </li>
+                                <li>
                                     <Link smooth to="#evolutions">
                                         Evolutions
                                     </Link>
@@ -96,11 +101,6 @@ export default class NameSection extends Component {
                                 <li>
                                     <Link smooth to="#ancestor">
                                         Ancestor
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link smooth to="#awakenings">
-                                        Awoken Skills
                                     </Link>
                                 </li>
                                 <li>

@@ -6,7 +6,7 @@ import MonsterOverview from "../../components/monster/monster_overview";
 import Awakenings from "../../components/monster/awakenings";
 import LeaderSkill from "../../components/monster/skills/leader_skill";
 import ActiveSkill from "../../components/monster/skills/active_skill";
-import Evolutions from '../../components/monster/evolutions/evolutions';
+import Evolutions from "../../components/monster/evolutions/evolutions";
 import Ancestor from "../../components/monster/evolutions/ancestor";
 
 export default class Monster extends Component {
@@ -15,9 +15,19 @@ export default class Monster extends Component {
         this.state = {
             monster: {},
             activeSkill: {},
-            leaderSkill: {}
+            leaderSkill: {},
+            ancestor: {}
         };
         this.data_url = "http://localhost:8000";
+        this.getImageLink = this.getImageLink.bind(this);
+    }
+
+    getImageLink(result) {
+        return (
+            "https://api.pad-db.com/static/padimages/portrait/" +
+            String(result) +
+            ".png"
+        );
     }
 
     componentDidMount() {
@@ -52,6 +62,22 @@ export default class Monster extends Component {
                     .catch(err => {
                         console.log(err);
                     });
+
+                Axios.get(
+                    this.data_url + "/monsters/" +
+                        String(this.state.monster.ancestor_id)
+                )
+                    .then(response => {
+                        if (response.data.length !== 0) {
+                            console.log("Found ancestor: " + response.data);
+                            this.setState({ ancestor: response.data });
+                        } else {
+                            console.log("No ancestor");
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
             })
             .catch(err => {
                 console.log(err);
@@ -70,10 +96,10 @@ export default class Monster extends Component {
                     <Awakenings monster={this.state.monster} />
                 </div>
                 <div id="evolutions">
-                    <Evolutions monster={this.state.monster}/>
+                    <Evolutions monster={this.state.monster} />
                 </div>
                 <div id="ancestor">
-                    <Ancestor monster={this.state.monster}/>
+                    <Ancestor monster={this.state.monster} ancestor={this.state.ancestor} getImageLink={this.getImageLink} />
                 </div>
                 <div id="activeskill">
                     <ActiveSkill skill={this.state.activeSkill} />

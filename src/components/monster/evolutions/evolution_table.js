@@ -19,19 +19,6 @@ export default class EvolutionTable extends Component {
             return (
                 <div>
                     <table className="table is-fullwidth">
-                        <thead>
-                            <tr>
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                                <th />
-                            </tr>
-                        </thead>
                         <tbody>
                             {this.props.evolutions.map(evolution => (
                                 <tr key={evolution.card_id}>
@@ -136,12 +123,12 @@ export default class EvolutionTable extends Component {
                                         <a
                                             href={
                                                 "/monster/" +
-                                                String(evolution.evo_mat_1)
+                                                String(evolution.card_id)
                                             }
                                         >
                                             <img
                                                 src={this.getImageLink(
-                                                    evolution.evo_mat_1
+                                                    evolution.card_id
                                                 )}
                                                 alt="pad_image"
                                             />
