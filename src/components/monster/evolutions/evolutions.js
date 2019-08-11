@@ -22,7 +22,7 @@ export default class Evolutions extends Component {
                         </div>
                         <div className="column is-bordered">
                             <div className="container is-fluid has-bottom-margin">
-                                <EvolutionTable monster={this.props.monster.card_id} evolutions={this.props.monster.evolution_list} />
+                                <EvolutionTable monster={this.props.monster} evolutions={this.props.monster.evolution_list} />
                             </div>
                         </div>
                     </div>

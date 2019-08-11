@@ -4,6 +4,15 @@ export default class EvolutionTable extends Component {
     constructor(props) {
         super(props);
         this.getImageLink = this.getImageLink.bind(this);
+        this.makeMonsterImgLink = this.makeMonsterImgLink.bind(this);
+    }
+
+    makeMonsterImgLink(card_id) {
+        return (
+            <a href={"/monster/" + String(card_id)}>
+                <img src={this.getImageLink(card_id)} alt="pad_image" />
+            </a>
+        );
     }
 
     getImageLink(result) {
@@ -23,116 +32,46 @@ export default class EvolutionTable extends Component {
                             {this.props.evolutions.map(evolution => (
                                 <tr key={evolution.card_id}>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(this.props.monster)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    this.props.monster
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        this.props.monster.card_id
+                                    )}
                                     </td>
                                     <td style={{ verticalAlign: "middle" }}>
                                         <i className="fas fa-plus" />
                                     </td>
 
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.evo_mat_1)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.evo_mat_1
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.evo_mat_1
+                                    )}
                                     </td>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.evo_mat_2)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.evo_mat_2
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.evo_mat_2
+                                    )}
                                     </td>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.evo_mat_3)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.evo_mat_3
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.evo_mat_3
+                                    )}
                                     </td>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.evo_mat_4)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.evo_mat_4
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.evo_mat_4
+                                    )}
                                     </td>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.evo_mat_5)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.evo_mat_5
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.evo_mat_5
+                                    )}
                                     </td>
                                     <td style={{ verticalAlign: "middle" }}>
                                         <i className="fas fa-equals" />
                                     </td>
                                     <td className="has-text-centered">
-                                        <a
-                                            href={
-                                                "/monster/" +
-                                                String(evolution.card_id)
-                                            }
-                                        >
-                                            <img
-                                                src={this.getImageLink(
-                                                    evolution.card_id
-                                                )}
-                                                alt="pad_image"
-                                            />
-                                        </a>
+                                    {this.makeMonsterImgLink(
+                                        evolution.card_id
+                                    )}
                                     </td>
                                 </tr>
                             ))}
