@@ -61,7 +61,7 @@ export default class NameSection extends Component {
                             <img
                                 className="a-little-space"
                                 src={this.getPortraitImageLink()}
-                                alt={this.getAltPortraitImageLink()}
+                                alt={this.props.monster.name}
                             />
                             <div>
                                 <div className="title">
@@ -76,7 +76,7 @@ export default class NameSection extends Component {
                     <div className="container is-fluid">
                         <img
                             src={this.getFullImageLink()}
-                            alt={this.getAltFullImageLink()}
+                            alt={this.props.monster.name}
                         />
                     </div>
                     <div className="container is-fluid">
