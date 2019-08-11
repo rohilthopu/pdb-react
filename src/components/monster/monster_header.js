@@ -47,7 +47,7 @@ export default class NameSection extends Component {
     makeRarityIcons() {
         let icons = [];
         for (let i = 0; i < this.props.monster.rarity; i++) {
-            icons.push(<i key={i} className="fas fa-star" />);
+            icons.push(<i key={i} className="fas fa-star a-little-space" />);
         }
         return <div>{icons.map(icon => icon)}</div>;
     }
