@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import "./styles.css";
 import Axios from "axios";
 
-export default class MonsterAPI extends Component {
+export default class SkillAPI extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            monsterExample: {}
+            skillExample: {}
         };
-        this.monsterExampleURL = "https://api.pad-db.com/rest/monster/4204/";
+
+        this.skillExampleURL = "https://api.pad-db.com/rest/skill/4204/"
     }
 
     componentDidMount() {
-        Axios.get(this.monsterExampleURL)
+        Axios.get(this.skillExampleURL)
             .then(response => {
-                this.setState({ monsterExample: response.data });
+                this.setState({ skillExample: response.data });
             })
             .catch(err => {
                 console.log("Error fetching example data: " + err);
@@ -23,19 +24,19 @@ export default class MonsterAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="monsters">
+            <div className="box" id="skills">
                 <div className="main-title columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
-                            <h1 className="title">Monsters</h1>
+                            <h1 className="title">Skills</h1>
                             <pre>
                                 <code>
-                                    https://api.pad-db.com/rest/monsters/
+                                    https://api.pad-db.com/rest/skills/
                                 </code>
                             </pre>
                             <pre>
                                 <code>
-                                    https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
+                                    https://api.pad-db.com/rest/skill/&lt;int:skill_id&gt;
                                 </code>
                             </pre>
                         </div>
@@ -45,16 +46,16 @@ export default class MonsterAPI extends Component {
                             <div className="box">
                                 <div>
                                     I have two public API endpoints available
-                                    for monsters.
+                                    for skills.
                                 </div>
                                 <div>The first one,</div>
                                 <pre>
                                     <code>
-                                        https://api.pad-db.com/rest/monsters/
+                                        https://api.pad-db.com/rest/skills/
                                     </code>
                                 </pre>
                                 <div>
-                                    returns a list of every monster object with
+                                    returns a list of every skill object with
                                     every column available in the PAD DB
                                     database.
                                 </div>
@@ -63,37 +64,33 @@ export default class MonsterAPI extends Component {
                                 <div>The second one</div>
                                 <pre>
                                     <code>
-                                        https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
+                                        https://api.pad-db.com/rest/skill/&lt;int:skill_id&gt;
                                     </code>
                                 </pre>
                                 <div>
-                                    requires an additional value, the monsters
+                                    requires an additional value, the skills
                                     integer ID value, and returns an single
-                                    monster object
+                                    skill object
                                 </div>
                                 <pre>
-                                    {this.monsterExampleURL}
+                                    {this.skillExampleURL}
                                 </pre>
                                 <div>Returns the following:</div>
                                 <pre>
                                     <code>
                                         {this.props.makeJSONString(
-                                            this.state.monsterExample
+                                            this.state.skillExample
                                         )}
                                     </code>
                                 </pre>
                                 <div>
-                                    Note that in order to access the List
-                                    values, you will need to deserialize them
-                                    individual.
+                                    Note that the multiplier calculations have been done ahead of time.
                                 </div>
-                                <div>Like this:</div>
+                                <div>The values</div>
                                 <pre>
-                                    <code>
-                                        awakenings =
-                                        json.loads(monster['awakenings'])
-                                    </code>
+                                    *_full
                                 </pre>
+                                <div>indicate the values when paired with itself</div>
                             </div>
                         </div>
                     </div>

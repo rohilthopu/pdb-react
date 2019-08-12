@@ -2,19 +2,20 @@ import React, { Component } from "react";
 import "./styles.css";
 import Axios from "axios";
 
-export default class MonsterAPI extends Component {
+export default class DungeonAPI extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            monsterExample: {}
+            dungeonExample: {}
         };
-        this.monsterExampleURL = "https://api.pad-db.com/rest/monster/4204/";
+
+        this.dungeonExampleURL = "https://api.pad-db.com/rest/dungeon/11/";
     }
 
     componentDidMount() {
-        Axios.get(this.monsterExampleURL)
+        Axios.get(this.dungeonExampleURL)
             .then(response => {
-                this.setState({ monsterExample: response.data });
+                this.setState({ dungeonExample: response.data });
             })
             .catch(err => {
                 console.log("Error fetching example data: " + err);
@@ -23,19 +24,19 @@ export default class MonsterAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="monsters">
+            <div className="box" id="dungeons">
                 <div className="main-title columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
-                            <h1 className="title">Monsters</h1>
+                            <h1 className="title">Dungeons</h1>
                             <pre>
                                 <code>
-                                    https://api.pad-db.com/rest/monsters/
+                                    https://api.pad-db.com/rest/dungeons/
                                 </code>
                             </pre>
                             <pre>
                                 <code>
-                                    https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
+                                    https://api.pad-db.com/rest/dungeon/&lt;int:dungeon_id&gt;
                                 </code>
                             </pre>
                         </div>
@@ -45,16 +46,16 @@ export default class MonsterAPI extends Component {
                             <div className="box">
                                 <div>
                                     I have two public API endpoints available
-                                    for monsters.
+                                    for dungeons.
                                 </div>
                                 <div>The first one,</div>
                                 <pre>
                                     <code>
-                                        https://api.pad-db.com/rest/monsters/
+                                        https://api.pad-db.com/rest/dungeons/
                                     </code>
                                 </pre>
                                 <div>
-                                    returns a list of every monster object with
+                                    returns a list of every dungeon object with
                                     every column available in the PAD DB
                                     database.
                                 </div>
@@ -63,37 +64,28 @@ export default class MonsterAPI extends Component {
                                 <div>The second one</div>
                                 <pre>
                                     <code>
-                                        https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
+                                        https://api.pad-db.com/rest/dungeon/&lt;int:dungeon_id&gt;
                                     </code>
                                 </pre>
                                 <div>
-                                    requires an additional value, the monsters
+                                    requires an additional value, the dungeons
                                     integer ID value, and returns an single
-                                    monster object
+                                    dungeon object
                                 </div>
-                                <pre>
-                                    {this.monsterExampleURL}
-                                </pre>
+                                <pre>{this.dungeonExampleURL}</pre>
                                 <div>Returns the following:</div>
                                 <pre>
                                     <code>
                                         {this.props.makeJSONString(
-                                            this.state.monsterExample
+                                            this.state.dungeonExample
                                         )}
                                     </code>
                                 </pre>
                                 <div>
-                                    Note that in order to access the List
-                                    values, you will need to deserialize them
-                                    individual.
+                                    Dungeon objects are connected to floor
+                                    objects by their dungeon_id value
+                                    (essentially the dungeon_id is the pk)
                                 </div>
-                                <div>Like this:</div>
-                                <pre>
-                                    <code>
-                                        awakenings =
-                                        json.loads(monster['awakenings'])
-                                    </code>
-                                </pre>
                             </div>
                         </div>
                     </div>

@@ -34,8 +34,8 @@ export default class APIHeader extends Component {
                                         </Link>{" "}
                                     </li>
                                     <li>
-                                        <Link smooth to="#dungoen_floors">
-                                            Dungeon Floors
+                                        <Link smooth to="#floors">
+                                            Floors
                                         </Link>
                                     </li>
                                 </ul>
