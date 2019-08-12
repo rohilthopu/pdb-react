@@ -7,11 +7,16 @@ class SearchResults extends React.Component {
         this.getMonsterLink = this.getMonsterLink.bind(this);
         this.getImageLink = this.getImageLink.bind(this);
         this.makeAwokenSkills = this.makeAwokenSkills.bind(this);
+        this.getPDXMonsterLink = this.getPDXMonsterLink.bind(this);
     }
 
     getMonsterLink(result) {
+        return "/monster/" + String(result.card_id);
+    }
+
+    getPDXMonsterLink(result) {
         return (
-            "/monster/" +
+            "http://www.puzzledragonx.com/en/monster.asp?n=" +
             String(result.card_id)
         );
     }
@@ -64,6 +69,7 @@ class SearchResults extends React.Component {
                                 <tr>
                                     <th className="has-text-left" />
                                     <th className="has-text-centered">NAME</th>
+                                    <th className="has-text-centered">Link</th>
                                     <th className="has-text-centered">
                                         MAX HP
                                     </th>
@@ -93,6 +99,9 @@ class SearchResults extends React.Component {
                                             />
                                         </td>
                                         <td className="has-text-centered">
+                                            {result.name}
+                                        </td>
+                                        <td className="has-text-centered">
                                             <a
                                                 href={this.getMonsterLink(
                                                     result
@@ -100,7 +109,17 @@ class SearchResults extends React.Component {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                {result.name}
+                                                PAD DB
+                                            </a>
+                                            {" / "}
+                                            <a
+                                                href={this.getPDXMonsterLink(
+                                                    result
+                                                )}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                PDX
                                             </a>
                                         </td>
                                         <td className="has-text-centered">

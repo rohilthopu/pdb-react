@@ -15,24 +15,35 @@ class Search extends React.Component {
         };
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.storeCurrentSearch = this.storeCurrentSearch.bind(this);
+        this.getSearchResults = this.getSearchResults.bind(this)
         this.resultsSection = React.createRef();
+    }
+
+    componentDidMount() {
+        if (this.state.currentQuery !== "") {
+            this.getSearchResults(this.state.currentQuery);
+        }
+    }
+
+    getSearchResults(value) {
+        this.setState({ showResults: true, searchResults: [] });
+        axios
+            .get("https://api.pad-db.com/search/" + value)
+            .then(response => {
+                this.setState({ searchResults: response.data });
+                this.resultsSection.current.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     handleKeyDown = e => {
         if (e.key === "Enter") {
-            this.setState({ showResults: true, searchResults: [] });
-            axios
-                .get("https://api.pad-db.com/search/" + e.target.value)
-                .then(response => {
-                    this.setState({ searchResults: response.data });
-                    this.resultsSection.current.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+            this.getSearchResults(e.target.value);   
         }
     };
 
