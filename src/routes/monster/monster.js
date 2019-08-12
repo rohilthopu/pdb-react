@@ -18,7 +18,7 @@ export default class Monster extends Component {
             leaderSkill: {},
             ancestor: {}
         };
-        this.data_url = "http://localhost:8000";
+        this.data_url = "https://api.pad-db.com";
         this.getImageLink = this.getImageLink.bind(this);
     }
 
