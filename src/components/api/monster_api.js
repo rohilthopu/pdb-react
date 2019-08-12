@@ -1,7 +1,25 @@
-import React, { Component } from 'react';
-import './styles.css';
+import React, { Component } from "react";
+import "./styles.css";
+import Axios from "axios";
 
 export default class MonsterAPI extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            monsterExample: {}
+        };
+    }
+
+    componentDidMount() {
+        Axios.get("https://api.pad-db.com/rest/monster/4204/")
+            .then(response => {
+                this.setState({ monsterExample: response.data });
+            })
+            .catch(err => {
+                console.log("Error fetching example data: " + err);
+            });
+    }
+
     render() {
         return (
             <div className="box" id="monsters">
@@ -9,58 +27,68 @@ export default class MonsterAPI extends Component {
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Monsters</h1>
+                            <pre>
+                                <code>
+                                    https://api.pad-db.com/rest/monsters/
+                                </code>
+                            </pre>
+                            <pre>
+                                <code>
+                                    https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
+                                </code>
+                            </pre>
                         </div>
                     </div>
                     <div className="column">
                         <div className="container is-fluid has-bottom-margin">
-                            <div>
-                                The PAD DB Search Engine provides an intuitive way to filter PAD data through a lightweight
-                                query system powered by the magic of ElasticSearch.
-                            </div>
-                            <div>
-                                The engine accepts the logical operators for functions like "greater than", "less than",
-                                and "equals"
-                                as well as certain key words, such as "and" to filter down data based on a set of given
-                                specifications.
-                            </div>
-                            <div>
-                                Consider the following query:
-                            </div>
-                            <div>
+                            <div className="box">
+                                <div>
+                                    I have two public API endpoints available
+                                    for monsters.
+                                </div>
+                                <div>The first one,</div>
                                 <pre>
                                     <code>
-                                        attribute = wood and awakenings = 7c, unbindable
+                                        https://api.pad-db.com/rest/monsters/
                                     </code>
                                 </pre>
+                                <div>
+                                    returns a list of every monster object with
+                                    every column available in the PAD DB
+                                    database.
+                                </div>
                             </div>
-                            <div>
-                                This query searches for all monsters that have an "attribute" value of "wood", then
-                                reduces that result set down
-                                by the monsters that have both a 7C (Enhanced Combo) and Unbindable (Resistance Bind)
-                                awoken skill.
-                            </div>
-                            <div>
-                                If we wanted to filter this down even more, we could add another clause of
-                            </div>
-                            <div>
+                            <div className="box">
+                                <div>The second one</div>
                                 <pre>
                                     <code>
-                                        type = dragon, god
+                                        https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
                                     </code>
                                 </pre>
-                            </div>
-                            <div>
-                                To give us a final query of
-                            </div>
-                            <div>
+                                <div>
+                                    requires an additional value, the monsters
+                                    integer ID value, and returns an object as
+                                    follows
+                                </div>
                                 <pre>
                                     <code>
-                                        attribute = wood and awakenings = 7c, unbindable and type = dragon, god
+                                        {this.props.makeJSONString(
+                                            this.state.monsterExample
+                                        )}
                                     </code>
                                 </pre>
-                            </div>
-                            <div>
-                                Try copying this query into the search engine and see what you find.
+                                <div>
+                                    Note that in order to access the List
+                                    values, you will need to deserialize them
+                                    individual.
+                                </div>
+                                <div>Like this:</div>
+                                <pre>
+                                    <code>
+                                        awakenings =
+                                        json.loads(monster['awakenings'])
+                                    </code>
+                                </pre>
                             </div>
                         </div>
                     </div>
