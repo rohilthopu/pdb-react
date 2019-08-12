@@ -28,7 +28,7 @@ class Search extends React.Component {
     getSearchResults(value) {
         this.setState({ showResults: true, searchResults: [] });
         axios
-            .get("https://api.pad-db.com/search/" + value)
+            .get("https://api.pad-db.com/search/monsters/" + value)
             .then(response => {
                 this.setState({ searchResults: response.data });
                 this.resultsSection.current.scrollIntoView({
