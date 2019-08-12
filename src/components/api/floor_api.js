@@ -34,8 +34,8 @@ export default class FloorAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="floors">
-                <div className="main-title columns is-desktop is-centered">
+            <div id="floors">
+                <div className="columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Floors</h1>
@@ -43,9 +43,7 @@ export default class FloorAPI extends Component {
                                 <code>/rest/floors/</code>
                             </pre>
                             <pre>
-                                <code>
-                                    /rest/floors/&lt;int:dungeon_id&gt;
-                                </code>
+                                <code>/rest/floors/&lt;int:dungeon_id&gt;</code>
                             </pre>
                             <pre>
                                 /rest/floor/&lt;int:dungeon_id&gt;/&lt;int:floor_number&gt;

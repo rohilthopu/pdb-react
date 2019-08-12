@@ -8,6 +8,7 @@ export default class APIHeader extends Component {
                 <section className="hero is-dark is-fullheight">
                     <div className="hero-body">
                         <div className="container">
+                            <div className="title is-large">api.pad-db.com</div>
                             <p className="title">Public REST API Endpoints</p>
                             <p className="subtitle">
                                 Click on an item on the right to jump to its
@@ -18,6 +19,11 @@ export default class APIHeader extends Component {
                             <aside className="menu is-large">
                                 <p className="menu-label">SECTIONS</p>
                                 <ul className="menu-list">
+                                    <li>
+                                        <Link smooth to="#guerrillas">
+                                            Guerrillas
+                                        </Link>
+                                    </li>
                                     <li>
                                         <Link smooth to="#monsters">
                                             Monsters

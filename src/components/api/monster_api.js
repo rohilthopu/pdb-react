@@ -23,20 +23,16 @@ export default class MonsterAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="monsters">
-                <div className="main-title columns is-desktop is-centered">
+            <div id="monsters">
+                <div className="columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Monsters</h1>
                             <pre>
-                                <code>
-                                    https://api.pad-db.com/rest/monsters/
-                                </code>
+                                <code>/rest/monsters/</code>
                             </pre>
                             <pre>
-                                <code>
-                                    https://api.pad-db.com/rest/monster/&lt;int:card_id&gt;
-                                </code>
+                                <code>/rest/monster/&lt;int:card_id&gt;</code>
                             </pre>
                         </div>
                     </div>
@@ -71,9 +67,7 @@ export default class MonsterAPI extends Component {
                                     integer ID value, and returns an single
                                     monster object
                                 </div>
-                                <pre>
-                                    {this.monsterExampleURL}
-                                </pre>
+                                <pre>{this.monsterExampleURL}</pre>
                                 <div>Returns the following:</div>
                                 <pre>
                                     <code>

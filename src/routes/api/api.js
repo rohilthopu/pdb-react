@@ -5,6 +5,7 @@ import MonsterAPI from "../../components/api/monster_api";
 import SkillAPI from "../../components/api/skill_api";
 import DungeonAPI from "../../components/api/dungeon_api";
 import FloorAPI from "../../components/api/floor_api";
+import GuerrillaAPI from "../../components/api/guerrilla_api";
 
 export default class API extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ export default class API extends Component {
             <div>
                 <NavBar />
                 <APIHeader />
+                <GuerrillaAPI makeJSONString={this.makeJSONString} />
                 <MonsterAPI makeJSONString={this.makeJSONString} />
                 <SkillAPI makeJSONString={this.makeJSONString} />
                 <DungeonAPI makeJSONString={this.makeJSONString} />

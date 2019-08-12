@@ -11,6 +11,7 @@ class NavBar extends React.Component {
                             <span>PAD DB</span>
                         </a>
                         <a className='navbar-item' href='/search-guide/'>Search Guide</a>
+                        <a className='navbar-item' href='/api/'>REST API</a>
                         <a className='navbar-item' href='/schedule/'>Schedule</a>
                     </div>
                 </div>

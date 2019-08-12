@@ -9,7 +9,7 @@ export default class SkillAPI extends Component {
             skillExample: {}
         };
 
-        this.skillExampleURL = "https://api.pad-db.com/rest/skill/4204/"
+        this.skillExampleURL = "https://api.pad-db.com/rest/skill/4204/";
     }
 
     componentDidMount() {
@@ -24,20 +24,16 @@ export default class SkillAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="skills">
-                <div className="main-title columns is-desktop is-centered">
+            <div id="skills">
+                <div className="columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Skills</h1>
                             <pre>
-                                <code>
-                                    https://api.pad-db.com/rest/skills/
-                                </code>
+                                <code>/rest/skills/</code>
                             </pre>
                             <pre>
-                                <code>
-                                    https://api.pad-db.com/rest/skill/&lt;int:skill_id&gt;
-                                </code>
+                                <code>/rest/skill/&lt;int:skill_id&gt;</code>
                             </pre>
                         </div>
                     </div>
@@ -72,9 +68,7 @@ export default class SkillAPI extends Component {
                                     integer ID value, and returns an single
                                     skill object
                                 </div>
-                                <pre>
-                                    {this.skillExampleURL}
-                                </pre>
+                                <pre>{this.skillExampleURL}</pre>
                                 <div>Returns the following:</div>
                                 <pre>
                                     <code>
@@ -84,13 +78,14 @@ export default class SkillAPI extends Component {
                                     </code>
                                 </pre>
                                 <div>
-                                    Note that the multiplier calculations have been done ahead of time.
+                                    Note that the multiplier calculations have
+                                    been done ahead of time.
                                 </div>
                                 <div>The values</div>
-                                <pre>
-                                    *_full
-                                </pre>
-                                <div>indicate the values when paired with itself</div>
+                                <pre>*_full</pre>
+                                <div>
+                                    indicate the values when paired with itself
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -24,19 +24,17 @@ export default class DungeonAPI extends Component {
 
     render() {
         return (
-            <div className="box" id="dungeons">
-                <div className="main-title columns is-desktop is-centered">
+            <div id="dungeons">
+                <div className="columns is-desktop is-centered">
                     <div className="column is-centered is-one-third">
                         <div className="container is-fluid">
                             <h1 className="title">Dungeons</h1>
                             <pre>
-                                <code>
-                                    https://api.pad-db.com/rest/dungeons/
-                                </code>
+                                <code>/rest/dungeons/</code>
                             </pre>
                             <pre>
                                 <code>
-                                    https://api.pad-db.com/rest/dungeon/&lt;int:dungeon_id&gt;
+                                    /rest/dungeon/&lt;int:dungeon_id&gt;
                                 </code>
                             </pre>
                         </div>
