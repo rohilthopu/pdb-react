@@ -20,7 +20,7 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        if (this.state.currentQuery !== "") {
+        if (this.state.currentQuery !== null) {
             this.getSearchResults(this.state.currentQuery);
         }
     }

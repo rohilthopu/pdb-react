@@ -1,0 +1,7 @@
+.main-title {
+    margin-top: 3%;
+}
+
+.has-bottom-margin * {
+    margin-bottom: 3%;
+}
