@@ -15,14 +15,8 @@ class Search extends React.Component {
         };
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.storeCurrentSearch = this.storeCurrentSearch.bind(this);
-        this.getSearchResults = this.getSearchResults.bind(this)
+        this.getSearchResults = this.getSearchResults.bind(this);
         this.resultsSection = React.createRef();
-    }
-
-    componentDidMount() {
-        if (this.state.currentQuery !== null) {
-            this.getSearchResults(this.state.currentQuery);
-        }
     }
 
     getSearchResults(value) {
@@ -43,7 +37,7 @@ class Search extends React.Component {
 
     handleKeyDown = e => {
         if (e.key === "Enter") {
-            this.getSearchResults(e.target.value);   
+            this.getSearchResults(e.target.value);
         }
     };
 

@@ -40,7 +40,7 @@ export default class MonsterAPI extends Component {
                         <div className="container is-fluid has-bottom-margin">
                             <div className="box">
                                 <div>
-                                    I have two public API endpoints available
+                                    There are two public API endpoints available
                                     for monsters.
                                 </div>
                                 <div>The first one,</div>

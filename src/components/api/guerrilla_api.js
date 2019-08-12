@@ -38,7 +38,7 @@ export default class GuerrillaAPI extends Component {
                         <div className="container is-fluid has-bottom-margin">
                             <div className="box">
                                 <div>
-                                    I have one public API endpoint available for
+                                    There is one public API endpoint available for
                                     guerrillas.
                                 </div>
                                 <div>The first singular endpoint, </div>

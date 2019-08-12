@@ -54,7 +54,7 @@ export default class FloorAPI extends Component {
                         <div className="container is-fluid has-bottom-margin">
                             <div className="box">
                                 <div>
-                                    I have two public API endpoints available
+                                    There are three public API endpoints available
                                     for floors.
                                 </div>
                                 <div>The first one,</div>

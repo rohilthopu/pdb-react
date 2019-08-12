@@ -41,7 +41,7 @@ export default class SkillAPI extends Component {
                         <div className="container is-fluid has-bottom-margin">
                             <div className="box">
                                 <div>
-                                    I have two public API endpoints available
+                                    There are two public API endpoints available
                                     for skills.
                                 </div>
                                 <div>The first one,</div>
