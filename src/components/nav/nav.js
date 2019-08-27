@@ -8,7 +8,7 @@ class NavBar extends React.Component {
                     <div className="navbar-start">
                         <a className="navbar-item" href="/">
                             <span className="icon"><i className="fas fa-home"/></span>
-                            <span>PAD DB</span>
+                            <span>PAD DB BETA</span>
                         </a>
                         <a className='navbar-item' href='/search-guide/'>Search Guide</a>
                         <a className='navbar-item' href='/api/'>REST API</a>
