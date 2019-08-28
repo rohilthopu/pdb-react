@@ -24,7 +24,11 @@ class Search extends React.Component {
         axios
             .get("https://api.pad-db.com/search/monsters/" + value)
             .then(response => {
-                this.setState({ searchResults: response.data });
+                if (response.data.constructor === Object) {
+                    this.setState({ searchResults: [response.data] });
+                } else {
+                    this.setState({ searchResults: response.data });
+                }
                 this.resultsSection.current.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
